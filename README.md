@@ -86,11 +86,11 @@ LM35 sensor initialized successfully.
 ### Supported Boards
 | Board | MCU | Clock | ADC Resolution | Status |
 |-------|-----|-------|----------------|--------|
-| STM32F4 Discovery | STM32F407VGT6 | 168 MHz | 12-bit | ✅ Fully Supported |
-| STM32F7 Discovery | STM32F746NG | 216 MHz | 12-bit | ✅ Fully Supported |
-| STM32H7 Discovery | STM32H743ZI | 400 MHz | 16-bit | ✅ Fully Supported |
-| Nucleo-F401RE | STM32F401RE | 84 MHz | 12-bit | ✅ Fully Supported |
-| Nucleo-F746ZG | STM32F746ZG | 216 MHz | 12-bit | ✅ Fully Supported |
+| STM32F4 Discovery | STM32F407VGT6 | 168 MHz | 12-bit |  Fully Supported |
+| STM32F7 Discovery | STM32F746NG | 216 MHz | 12-bit |  Fully Supported |
+| STM32H7 Discovery | STM32H743ZI | 400 MHz | 16-bit |  Fully Supported |
+| Nucleo-F401RE | STM32F401RE | 84 MHz | 12-bit |  Fully Supported |
+| Nucleo-F746ZG | STM32F746ZG | 216 MHz | 12-bit |  Fully Supported |
 
 ### Pin Configuration
 | LM35 Pin | Cortex-M Pin | Description |
@@ -288,7 +288,7 @@ python3 scripts/generate_config.py --board STM32F7 --adc-pin PC0 --led-pin PB0
 python3 scripts/generate_config.py --board NUCLEO-F401RE --adc-pin PA0 --led-pin PA5
 ```
 
-## 📖 Usage Examples
+##  Usage Examples
 
 ### Basic Temperature Reading
 ```c
@@ -480,11 +480,11 @@ make test
 ### Test Coverage
 | Test Category | Description | Status |
 |---------------|-------------|--------|
-| **Unit Tests** | LM35 driver functions | ✅ 95% coverage |
-| **Integration Tests** | GPIO + ADC interface | ✅ 90% coverage |
-| **Hardware Tests** | Physical sensor validation | ✅ Manual verification |
-| **Stress Tests** | Long-term operation | ✅ 72h continuous run |
-| **Boundary Tests** | Extreme temperature ranges | ✅ -55°C to 150°C |
+| **Unit Tests** | LM35 driver functions |  95% coverage |
+| **Integration Tests** | GPIO + ADC interface |  90% coverage |
+| **Hardware Tests** | Physical sensor validation |  Manual verification |
+| **Stress Tests** | Long-term operation |  72h continuous run |
+| **Boundary Tests** | Extreme temperature ranges |  -55°C to 150°C |
 
 ### Test Automation
 ```bash
@@ -563,7 +563,6 @@ We welcome contributions! Here's how you can help:
 4. Update documentation in `docs/`
 5. Submit pull request with test results
 
-
 ##  Acknowledgments
 
 - **STMicroelectronics** for Cortex-M microcontrollers and libraries
@@ -572,7 +571,6 @@ We welcome contributions! Here's how you can help:
 - **Open Source Community** for tools and inspiration
 
 ##  Support
-
 
 - **Email**: js.ramesh1990@gmail.com
 
@@ -586,7 +584,3 @@ We welcome contributions! Here's how you can help:
 ![Open PRs](https://img.shields.io/github/issues-pr/yourusername/lm35-cortex-m-gpio)
 
 ---
-
-**Made with ❤️ for embedded systems developers**
-
-If this project helps you, please consider giving it a ⭐️ on GitHub!
