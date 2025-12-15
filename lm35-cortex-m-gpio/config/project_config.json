@@ -1,0 +1,151 @@
+{
+  "adc_config": {
+    "channel": 0,
+    "conversion_mode": "single_ended",
+    "dma_enabled": true,
+    "interrupt_enabled": true,
+    "max_value": 4095,
+    "mv_per_step": 0.8057,
+    "oversampling": 16,
+    "pin": "PA0",
+    "reference_voltage": 3.3,
+    "resolution": 12,
+    "sampling_rate_hz": 1000,
+    "sampling_time": 480,
+    "voltage_per_step": 0.000806
+  },
+  "calibration": {
+    "auto_calibration": true,
+    "calibration_interval_hours": 24,
+    "calibration_points": [
+      {
+        "adc_value": 0,
+        "temperature_c": -55,
+        "voltage_mv": 0
+      },
+      {
+        "adc_value": 1024,
+        "temperature_c": 25,
+        "voltage_mv": 250
+      },
+      {
+        "adc_value": 3072,
+        "temperature_c": 150,
+        "voltage_mv": 1500
+      }
+    ],
+    "celsius_per_adc_step": 0.0806,
+    "gain_correction": 1.0,
+    "mv_per_celsius": 10.0,
+    "offset_voltage": 0.0,
+    "room_temperature_calibration": 25.0
+  },
+  "gpio_config": {
+    "sensor_ground": {
+      "description": "LM35 ground",
+      "initial_state": "low",
+      "mode": "output",
+      "pin": "GND",
+      "pull": "none"
+    },
+    "sensor_power": {
+      "description": "LM35 VCC supply",
+      "initial_state": "high",
+      "mode": "output",
+      "pin": "3V3",
+      "pull": "none"
+    },
+    "status_led": {
+      "description": "System status indicator",
+      "initial_state": "low",
+      "mode": "output",
+      "pin": "PD13",
+      "pull": "none"
+    }
+  },
+  "hardware": {
+    "board": {
+      "available_pins": {
+        "adc": [
+          "PA0",
+          "PA1",
+          "PA2",
+          "PA3",
+          "PC0",
+          "PC1",
+          "PC2",
+          "PC3"
+        ],
+        "gpio": [
+          "PA5",
+          "PB0",
+          "PB1",
+          "PB2",
+          "PC4",
+          "PC5",
+          "PC6",
+          "PD12",
+          "PD13",
+          "PD14",
+          "PD15"
+        ],
+        "led": [
+          "PD12",
+          "PD13",
+          "PD14",
+          "PD15"
+        ],
+        "power": [
+          "3V3",
+          "5V",
+          "GND"
+        ]
+      },
+      "clock_speed": 168000000,
+      "cpu": "Cortex-M4",
+      "type": "STM32F4",
+      "vendor": "STMicroelectronics"
+    },
+    "sensor": {
+      "accuracy": "\u00b10.5\u00b0C at 25\u00b0C",
+      "sensitivity": 10.0,
+      "supply_voltage": 3.3,
+      "temperature_range": [
+        -55,
+        150
+      ],
+      "type": "LM35"
+    }
+  },
+  "project": {
+    "board": "STM32F4",
+    "description": "GPIO-based LM35 Temperature Sensor Interface",
+    "generated": "2024-12-15T10:30:00.000000",
+    "name": "LM35_CortexM_GPIO",
+    "version": "1.0.0"
+  },
+  "sampling": {
+    "filter_alpha": 0.1,
+    "filter_type": "exponential_moving_average",
+    "noise_rejection": "median_filter",
+    "oversampling_factor": 4,
+    "sample_count": 16,
+    "thresholds": {
+      "critical": 80.0,
+      "high": 50.0,
+      "low": 0.0
+    },
+    "update_rate_ms": 1000
+  },
+  "uart_config": {
+    "baudrate": 115200,
+    "data_bits": 8,
+    "enabled": true,
+    "flow_control": "none",
+    "parity": "none",
+    "port": "USART2",
+    "rx_pin": "PA3",
+    "stop_bits": 1,
+    "tx_pin": "PA2"
+  }
+}

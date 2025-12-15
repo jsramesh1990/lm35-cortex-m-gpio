@@ -1,0 +1,31 @@
+lm35-cortex-m-gpio/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── config/
+│   ├── automatic_config.py
+│   └── project_config.json
+├── docs/
+│   ├── hardware_setup.md
+│   └── pin_configuration.md
+├── src/
+│   ├── drivers/
+│   │   ├── lm35_driver.c
+│   │   ├── lm35_driver.h
+│   │   ├── gpio_interface.c
+│   │   └── gpio_interface.h
+│   ├── main.c
+│   ├── system_init.c
+│   └── startup/
+│       └── startup_stm32f4xx.s
+├── inc/
+│   └── config.h
+├── scripts/
+│   ├── generate_config.py
+│   └── build.sh
+├── tests/
+│   ├── test_lm35.c
+│   └── test_gpio.c
+├── platformio.ini
+├── CMakeLists.txt
+└── Makefile
